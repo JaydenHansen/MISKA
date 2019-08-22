@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EEAABAC8-E09E-4265-99BD-B315B882E069}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{EEAABAC8-E09E-4265-99BD-B315B882E069}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="GLOBAL" ID="{C9ACABFE-D521-479D-B9FB-4C9599EED9F7}" ShortID="329009178">
+					<ChildrenList>
+						<Folder Name="OBJECT" ID="{FFF3F72F-B709-49A1-8687-E3068ED377BF}" ShortID="559089671">
+							<ChildrenList>
+								<Event Name="OBJ_JournalOpen" ID="{157001E8-1525-4158-94CD-7018436D021C}"/>
+								<Event Name="OBJ_GarbagePickup" ID="{B805815E-D6C7-4DAD-911D-8556E50204AF}">
+									<ChildrenList>
+										<Action Name="" ID="{69D05366-869D-4EF5-AF9A-06928B68C1EC}" ShortID="914177561">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Pick up" ID="{52475661-22D9-48F9-9ED5-56B83F1B4098}" WorkUnitID="{BDAA91F6-9A2A-409E-A0E4-928550375B6B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="OBJ_JournalClose" ID="{281D8531-0B6E-498B-821B-4FA5093E2CF9}"/>
+								<Event Name="OBJ_JournalWrite" ID="{4A504EF9-46F4-4237-9A01-146D383B0F69}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="PLAYER" ID="{1E6ED148-F40C-495D-B215-3024AF3F5BEA}" ShortID="1055529855">
+							<ChildrenList>
+								<Event Name="PLYR_Footstep" ID="{2646A45B-6C6D-42BD-B8F0-CFA5BEC02DA1}">
+									<ChildrenList>
+										<Action Name="" ID="{9C80E3AF-BC5C-4EA9-A97D-2B9E9BA2DDD3}" ShortID="938729149">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Footstep" ID="{CE7094A4-15B1-473C-90C0-B1E35343DF91}" WorkUnitID="{BDAA91F6-9A2A-409E-A0E4-928550375B6B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="UI" ID="{69F8DF61-2D66-464A-9214-169C833A2F04}" ShortID="254223084">
+							<ChildrenList>
+								<Event Name="UI_POIComplete" ID="{03A9A18E-E2E3-450A-B48E-1A624D7C41FB}"/>
+							</ChildrenList>
+						</Folder>
+						<Event Name="Start_Music" ID="{6359C87C-F9C8-4611-8CB7-187105B645DD}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="LOCAL" ID="{A2325219-5657-403E-BB10-B659926BDDD1}" ShortID="374897514">
+					<ChildrenList>
+						<Folder Name="ROCKS" ID="{2878B8F9-4857-4FC5-89C0-17C8E0F2F098}" ShortID="166212175">
+							<ChildrenList>
+								<Event Name="OBJ_RocksFall" ID="{8BB83A97-8E24-47A6-9612-1544BA0E96F8}"/>
+								<Event Name="OBJ_RocksPlaced" ID="{D218AE36-168F-49F8-BD59-314FDE71F4B0}"/>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

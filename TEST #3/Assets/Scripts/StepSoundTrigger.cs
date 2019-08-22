@@ -6,7 +6,7 @@ public class StepSoundTrigger : MonoBehaviour
 {
     Animator m_animator;
 
-   // public AK.Wwise.Event m_stepEvent;
+   public AK.Wwise.Event m_stepEvent;
 
 
 
@@ -18,7 +18,7 @@ public class StepSoundTrigger : MonoBehaviour
     //Triggered by Animation Event, plays Wwise Event
     public void OnStepTrigger()
     {
-       // m_stepEvent.Post(gameObject);
+       m_stepEvent.Post(gameObject);
     }
 
     //Sets Terrain Material (from TerrainReader) to player's position's material for use by Wwise to determine footstep sound
@@ -26,11 +26,11 @@ public class StepSoundTrigger : MonoBehaviour
     {
         if (terMat == TerrainMaterial.Dirt)
         {
-          //  AkSoundEngine.SetSwitch("Locomotion_Material", "Dirt", gameObject);
+          AkSoundEngine.SetSwitch("Locomotion_Material", "Dirt", gameObject);
         }
         else if (terMat == TerrainMaterial.Grass)
         {
-          //  AkSoundEngine.SetSwitch("Locomotion_Material", "Grass", gameObject);
+          AkSoundEngine.SetSwitch("Locomotion_Material", "Grass", gameObject);
         }
         else
         {
@@ -50,11 +50,11 @@ public class StepSoundTrigger : MonoBehaviour
         //Conditional set the movement State in Wwise (determines which type of movement sound to use)
         if (moveState == MovementState.Walking)
         {
-           // AkSoundEngine.SetSwitch("Locomotion_Speed", "Walk", gameObject);
+           AkSoundEngine.SetSwitch("Locomotion_Speed", "Walk", gameObject);
         }
         if (moveState == MovementState.Sprinting)
         {
-          //  AkSoundEngine.SetSwitch("Locomotion_Speed", "Sprint", gameObject);
+          AkSoundEngine.SetSwitch("Locomotion_Speed", "Sprint", gameObject);
         }
 
     }
