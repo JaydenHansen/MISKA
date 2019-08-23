@@ -9,6 +9,7 @@ public class Pickup : MonoBehaviour
     protected Collider m_collider;
     protected float m_baseDrag;
     protected float m_baseAngularDrag;
+    protected Renderer m_renderer;
 
     public Transform Target
     {
@@ -22,12 +23,17 @@ public class Pickup : MonoBehaviour
     {
         get { return m_collider; }
     }
+    public Renderer Renderer
+    {
+        get { return m_renderer; }
+    }
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
         m_rigidbody = GetComponent<Rigidbody>();
         m_collider = GetComponent<Collider>();
+        m_renderer = GetComponent<Renderer>();
         m_baseDrag = m_rigidbody.drag;
         m_baseAngularDrag = m_rigidbody.angularDrag;
     }
