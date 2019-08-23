@@ -10,6 +10,9 @@
 								<Folder Name="GAMEPLAY" ID="{1C6B60E4-EC78-494C-B1D7-7AF30235BC14}" ShortID="451156876">
 									<ChildrenList>
 										<SwitchContainer Name="Footstep" ID="{CE7094A4-15B1-473C-90C0-B1E35343DF91}" ShortID="1027223849">
+											<PropertyList>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
@@ -1140,6 +1143,9 @@
 												<Folder Name="JOURNAL" ID="{34C2150C-A52E-4124-BC48-BEFCDF729E72}" ShortID="826496683">
 													<ChildrenList>
 														<RandomSequenceContainer Name="OpenJournal" ID="{04055061-3D8F-4E21-8A9C-B62D74B03377}" ShortID="595149104">
+															<PropertyList>
+																<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
@@ -1150,6 +1156,9 @@
 															</ReferenceList>
 														</RandomSequenceContainer>
 														<RandomSequenceContainer Name="CloseJournal" ID="{BA48FA4D-1979-4075-AF4B-E70AD9306A0F}" ShortID="67466320">
+															<PropertyList>
+																<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
@@ -1160,6 +1169,9 @@
 															</ReferenceList>
 														</RandomSequenceContainer>
 														<RandomSequenceContainer Name="WriteInJournal" ID="{F87FA488-81E2-4D93-979F-F11C045FA09A}" ShortID="662029022">
+															<PropertyList>
+																<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
@@ -1174,6 +1186,9 @@
 												<Folder Name="GARBAGE" ID="{0173D0DA-1FBB-47C5-BA09-829F78F925D8}" ShortID="634903326">
 													<ChildrenList>
 														<SwitchContainer Name="TrashType" ID="{2643DFD8-9B2B-4BE3-A866-11ABB7F28DD3}" ShortID="743904428">
+															<PropertyList>
+																<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
@@ -1187,6 +1202,33 @@
 															</ReferenceList>
 															<ChildrenList>
 																<RandomSequenceContainer Name="Bottle" ID="{89670AF7-2DD3-4955-952E-BED76D74ED70}" ShortID="436275670">
+																	<PropertyList>
+																		<Property Name="Pitch" Type="int32">
+																			<ModifierList>
+																				<ModifierInfo>
+																					<Modifier Name="" ID="{503E3F00-FD55-4D7F-B82E-4B7C9B0D32F5}">
+																						<PropertyList>
+																							<Property Name="Enabled" Type="bool" Value="True"/>
+																							<Property Name="Max" Type="Real64" Value="51"/>
+																							<Property Name="Min" Type="Real64" Value="-354"/>
+																						</PropertyList>
+																					</Modifier>
+																				</ModifierInfo>
+																			</ModifierList>
+																		</Property>
+																		<Property Name="Volume" Type="Real64">
+																			<ModifierList>
+																				<ModifierInfo>
+																					<Modifier Name="" ID="{D43CE2E2-1677-4696-820D-13EF08C938D7}">
+																						<PropertyList>
+																							<Property Name="Enabled" Type="bool" Value="True"/>
+																							<Property Name="Min" Type="Real64" Value="-9"/>
+																						</PropertyList>
+																					</Modifier>
+																				</ModifierInfo>
+																			</ModifierList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="Conversion">
 																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
@@ -1195,6 +1237,65 @@
 																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
 																		</Reference>
 																	</ReferenceList>
+																	<ChildrenList>
+																		<Sound Name="Glass bottle 2" ID="{47819D0C-BA22-4FF5-8A49-FE6724A500F6}" ShortID="714656509">
+																			<ReferenceList>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Glass bottle 2" ID="{BFFC5993-4FA5-4CA5-9625-E3428A419753}" ShortID="58940914">
+																					<Language>SFX</Language>
+																					<AudioFile>Glass bottle 2.wav</AudioFile>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Glass bottle 2" ID="{BFFC5993-4FA5-4CA5-9625-E3428A419753}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Glass bottle 3" ID="{8E33CB1C-44B9-428E-9D20-C2E22B5E4AF2}" ShortID="771143225">
+																			<ReferenceList>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Glass bottle 3" ID="{8AD3D63A-E19A-4C1C-A8E4-7CFFC4105536}" ShortID="118404946">
+																					<Language>SFX</Language>
+																					<AudioFile>Glass bottle 3.wav</AudioFile>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Glass bottle 3" ID="{8AD3D63A-E19A-4C1C-A8E4-7CFFC4105536}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Glass bottle" ID="{F5FF74FA-1464-4BCB-999F-7CD272F2C3C2}" ShortID="360220227">
+																			<ReferenceList>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Glass bottle" ID="{9E468496-696B-434A-BA36-D71063BF01BD}" ShortID="318438522">
+																					<Language>SFX</Language>
+																					<AudioFile>Glass bottle.wav</AudioFile>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Glass bottle" ID="{9E468496-696B-434A-BA36-D71063BF01BD}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																	</ChildrenList>
 																</RandomSequenceContainer>
 															</ChildrenList>
 															<GroupingInfo>
@@ -1222,7 +1323,224 @@
 							</ChildrenList>
 						</Folder>
 						<Folder Name="WIND" ID="{59486992-4B8E-4570-A9C9-927140E8AB59}" ShortID="217723345"/>
-						<Folder Name="AMBIENCE" ID="{1FA61F2A-8CB0-41F3-ACF7-F728314843A7}" ShortID="471907591"/>
+						<Folder Name="AMBIENCE" ID="{1FA61F2A-8CB0-41F3-ACF7-F728314843A7}" ShortID="471907591">
+							<ChildrenList>
+								<Folder Name="BedAmbience" ID="{AC229689-DB0F-4376-BD28-8717D8525D58}" ShortID="515050880">
+									<ChildrenList>
+										<BlendContainer Name="Ambience" ID="{A8C6D211-EFCF-4391-8143-D82D0CBE2E39}" ShortID="309294876">
+											<PropertyList>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="EFX EXT Leafs Blowing in the Wind Close 01" ID="{FBB1A768-62EA-465A-9A7F-0981BD69FD93}" ShortID="120932309">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{DAA9680D-6723-496C-BF3D-321DD1E29332}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="EFX EXT Leafs Blowing in the Wind Close 01" ID="{21D09341-84F2-4713-BBFC-A43B508A2ED2}" ShortID="62116153">
+															<Language>SFX</Language>
+															<AudioFile>EFX EXT Leafs Blowing in the Wind Close 01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="EFX EXT Leafs Blowing in the Wind Close 01" ID="{21D09341-84F2-4713-BBFC-A43B508A2ED2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="BGSummerbugsDEEXT02-MS" ID="{06F7262A-FAF0-47F6-AF7F-F38DDD2E90B0}" ShortID="957455279">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="BGSummerbugsDEEXT02-MS" ID="{6E6E4BA7-0A5E-4117-96EC-B3C919B8C288}" ShortID="373910503">
+															<Language>SFX</Language>
+															<AudioFile>BGSummerbugsDEEXT02-MS.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="BGSummerbugsDEEXT02-MS" ID="{6E6E4BA7-0A5E-4117-96EC-B3C919B8C288}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<SwitchContainer Name="Crickets_Loc" ID="{B7918712-9934-42BC-8836-9C3D81401893}" ShortID="724256377">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+														</Reference>
+														<Reference Name="SwitchGroupOrStateGroup">
+															<ObjectRef Name="Circket_Loc" ID="{E68865FA-1912-456B-8516-506BD0546E0D}" WorkUnitID="{A34F8B61-9D20-4E9E-8130-FCF4A3172A11}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Crickets near a lake" ID="{C4F89AA8-D1C9-4111-AC19-F0CEADFB1C19}" ShortID="898895847">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Crickets near a lake" ID="{BA5571B6-0A35-414D-A3D2-AE36C838CE26}" ShortID="327690895">
+																	<Language>SFX</Language>
+																	<AudioFile>Crickets near a lake.wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Crickets near a lake" ID="{BA5571B6-0A35-414D-A3D2-AE36C838CE26}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Crickets in a field" ID="{A42C471E-E993-4D2E-9163-5CCFC650994C}" ShortID="305928224">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Crickets in a field" ID="{E37D6FB8-651E-4B15-8A9B-53431BC56BDE}" ShortID="659240309">
+																	<Language>SFX</Language>
+																	<AudioFile>Crickets in a field.wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Crickets in a field" ID="{E37D6FB8-651E-4B15-8A9B-53431BC56BDE}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<GroupingInfo>
+														<GroupingBehaviorList>
+															<GroupingBehavior>
+																<ItemRef Name="Crickets in a field" ID="{A42C471E-E993-4D2E-9163-5CCFC650994C}"/>
+															</GroupingBehavior>
+															<GroupingBehavior>
+																<ItemRef Name="Crickets near a lake" ID="{C4F89AA8-D1C9-4111-AC19-F0CEADFB1C19}"/>
+															</GroupingBehavior>
+														</GroupingBehaviorList>
+														<GroupingList>
+															<Grouping>
+																<SwitchRef Name="CricketLake" ID="{79B76BDA-7433-4681-A1E0-DF30CEF4EC55}"/>
+																<ItemList>
+																	<ItemRef Name="Crickets near a lake" ID="{C4F89AA8-D1C9-4111-AC19-F0CEADFB1C19}"/>
+																</ItemList>
+															</Grouping>
+															<Grouping>
+																<SwitchRef Name="CricketField" ID="{01DF75DB-8852-4E07-8E5E-DDBCC79BA073}"/>
+																<ItemList>
+																	<ItemRef Name="Crickets in a field" ID="{A42C471E-E993-4D2E-9163-5CCFC650994C}"/>
+																</ItemList>
+															</Grouping>
+														</GroupingList>
+													</GroupingInfo>
+												</SwitchContainer>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="EmittersAmbience" ID="{4EB1E8FD-6B9B-48E5-89C9-51CD5B1C895D}" ShortID="577590413">
+									<ChildrenList>
+										<Sound Name="CicadaNightClose" ID="{3E72F7A6-FC7E-4FF9-98A7-CA5782937708}" ShortID="68349377">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="CicadaNightClose" ID="{14DAD696-74EA-494B-8C14-4BC163F539BF}" ShortID="471469595">
+													<Language>SFX</Language>
+													<AudioFile>CicadaNightClose.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="CicadaNightClose" ID="{14DAD696-74EA-494B-8C14-4BC163F539BF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="KAIB_WATR_CU_Brook Light Water Flow_000789" ID="{A1F2A276-AE81-41A1-B18F-02E2AEC949DD}" ShortID="1009682100">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="KAIB_WATR_CU_Brook Light Water Flow_000789" ID="{41FBA37A-A495-4BE7-8209-D58A0F9A89E9}" ShortID="471705550">
+													<Language>SFX</Language>
+													<AudioFile>KAIB_WATR_CU_Brook Light Water Flow_000789.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="KAIB_WATR_CU_Brook Light Water Flow_000789" ID="{41FBA37A-A495-4BE7-8209-D58A0F9A89E9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="LOCAL" ID="{AB2C5B40-3296-49AF-ACBE-38B49F6C2E58}" ShortID="201134258">
@@ -1243,11 +1561,142 @@
 										</Sound>
 									</ChildrenList>
 								</Folder>
+								<Folder Name="ANIMALS" ID="{0050AAAF-8E87-4D2C-8F1E-795E32D711C7}" ShortID="570083503">
+									<ChildrenList>
+										<RandomSequenceContainer Name="Fox barks" ID="{98AE91AD-0BD6-433E-A24C-3B6801886D1A}" ShortID="224456248">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{71C0BFB0-57CA-4725-A0DD-6DC536FA1D4E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="152"/>
+																	<Property Name="Min" Type="Real64" Value="-101"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{A704A093-1DAD-47B6-81AD-FE0BF75ACA62}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="3"/>
+																	<Property Name="Min" Type="Real64" Value="-5"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Fox bark" ID="{F885BB00-5977-4D03-A903-2118AB60D9B0}" ShortID="937259856">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Fox bark" ID="{95AF15B2-8311-4CA4-ABBF-73658973F2B2}" ShortID="465045227">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="5.96508276255708E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.350448612300228"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Fox bark.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Fox bark" ID="{95AF15B2-8311-4CA4-ABBF-73658973F2B2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Dog akita puppy single bark_BLASTWAVEFX_00090" ID="{5BC692C0-DE61-4A07-A60E-8A093E480271}" ShortID="434077551">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dog akita puppy single bark_BLASTWAVEFX_00090" ID="{A7A996BA-BAE1-4A4A-B798-9BEF8ED2A7EC}" ShortID="236611281">
+															<Language>SFX</Language>
+															<AudioFile>Dog akita puppy single bark_BLASTWAVEFX_00090.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dog akita puppy single bark_BLASTWAVEFX_00090" ID="{A7A996BA-BAE1-4A4A-B798-9BEF8ED2A7EC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Dog akita puppy whine breathy short_BLASTWAVEFX_10305" ID="{020FCBFB-A65A-4BD3-97CA-82339B8D505E}" ShortID="398619820">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dog akita puppy whine breathy short_BLASTWAVEFX_10305" ID="{62EE72B1-626B-443A-9BBF-32D5353A9096}" ShortID="850930565">
+															<Language>SFX</Language>
+															<AudioFile>Dog akita puppy whine breathy short_BLASTWAVEFX_10305.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dog akita puppy whine breathy short_BLASTWAVEFX_10305" ID="{62EE72B1-626B-443A-9BBF-32D5353A9096}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Dog in the mountains barking and growling" ID="{5BE92F74-5487-4BA0-BC0D-309C0BFB635C}" ShortID="1031017946">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2BEB96F9-C13A-4F53-962F-D1D66A91AF36}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{53F336C8-4745-4A7A-B19E-8EE120A18E42}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dog in the mountains barking and growling" ID="{B46B119F-E978-4321-91DD-33DF675C31BC}" ShortID="891604117">
+															<Language>SFX</Language>
+															<AudioFile>Dog in the mountains barking and growling.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Dog in the mountains barking and growling" ID="{B46B119F-E978-4321-91DD-33DF675C31BC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{A797F875-628F-4C48-BF83-2B95FFF97DA5}"/>
+											</PositioningInfo>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="STATION" ID="{2DBDA12F-4AA2-4DE6-A249-E029792750B0}" ShortID="716825042"/>
 						<Folder Name="DUCKS" ID="{AAB07626-8856-4EC6-A9A1-4A6C5FBA9471}" ShortID="983657930"/>
-						<Folder Name="FOXES" ID="{C5D1A5AC-F8F0-4231-AF72-1EB71D29B4DF}" ShortID="395131440"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

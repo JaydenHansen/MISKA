@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Games Making\2019\MISKA\MISKA-Audio Wwise\</ProjectRoot>
-		<SourceFilesRoot>D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Games Making\2019\MISKA\MISKA-Audio Wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Games Making\2019\MISKA\MISKA-Audio Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -29,6 +29,14 @@
 					<ShortName>grasswalk3.wav</ShortName>
 					<Path>SFX\grasswalk3_10C4C929.wem</Path>
 				</File>
+				<File Id="58940914" Language="SFX">
+					<ShortName>Glass bottle 2.wav</ShortName>
+					<Path>SFX\Glass bottle 2_10C4C929.wem</Path>
+				</File>
+				<File Id="62116153" Language="SFX">
+					<ShortName>EFX EXT Leafs Blowing in the Wind Close 01.wav</ShortName>
+					<Path>SFX\EFX EXT Leafs Blowing in the Wind Close 01_10C4C929.wem</Path>
+				</File>
 				<File Id="95813090" Language="SFX">
 					<ShortName>CHAR_KeyJingle1.wav</ShortName>
 					<Path>SFX\CHAR_KeyJingle1_10C4C929.wem</Path>
@@ -37,6 +45,10 @@
 					<ShortName>CHAR_StepDirt2.wav</ShortName>
 					<Path>SFX\CHAR_StepDirt2_10C4C929.wem</Path>
 				</File>
+				<File Id="118404946" Language="SFX">
+					<ShortName>Glass bottle 3.wav</ShortName>
+					<Path>SFX\Glass bottle 3_10C4C929.wem</Path>
+				</File>
 				<File Id="159767409" Language="SFX">
 					<ShortName>run_dirt3.wav</ShortName>
 					<Path>SFX\run_dirt3_10C4C929.wem</Path>
@@ -44,6 +56,18 @@
 				<File Id="225701338" Language="SFX">
 					<ShortName>run_dirt4.wav</ShortName>
 					<Path>SFX\run_dirt4_10C4C929.wem</Path>
+				</File>
+				<File Id="318438522" Language="SFX">
+					<ShortName>Glass bottle.wav</ShortName>
+					<Path>SFX\Glass bottle_10C4C929.wem</Path>
+				</File>
+				<File Id="327690895" Language="SFX">
+					<ShortName>Crickets near a lake.wav</ShortName>
+					<Path>SFX\Crickets near a lake_10C4C929.wem</Path>
+				</File>
+				<File Id="373910503" Language="SFX">
+					<ShortName>BGSummerbugsDEEXT02-MS.wav</ShortName>
+					<Path>SFX\BGSummerbugsDEEXT02-MS_10C4C929.wem</Path>
 				</File>
 				<File Id="411336376" Language="SFX">
 					<ShortName>CHAR_KeyJingle9.wav</ShortName>
@@ -57,6 +81,14 @@
 					<ShortName>grassrun1.wav</ShortName>
 					<Path>SFX\grassrun1_10C4C929.wem</Path>
 				</File>
+				<File Id="471469595" Language="SFX">
+					<ShortName>CicadaNightClose.wav</ShortName>
+					<Path>SFX\CicadaNightClose_10C4C929.wem</Path>
+				</File>
+				<File Id="471705550" Language="SFX">
+					<ShortName>KAIB_WATR_CU_Brook Light Water Flow_000789.wav</ShortName>
+					<Path>SFX\KAIB_WATR_CU_Brook Light Water Flow_000789_10C4C929.wem</Path>
+				</File>
 				<File Id="556919227" Language="SFX">
 					<ShortName>CHAR_StepDirt1.wav</ShortName>
 					<Path>SFX\CHAR_StepDirt1_10C4C929.wem</Path>
@@ -64,6 +96,10 @@
 				<File Id="640444701" Language="SFX">
 					<ShortName>grassrun3.wav</ShortName>
 					<Path>SFX\grassrun3_10C4C929.wem</Path>
+				</File>
+				<File Id="659240309" Language="SFX">
+					<ShortName>Crickets in a field.wav</ShortName>
+					<Path>SFX\Crickets in a field_10C4C929.wem</Path>
 				</File>
 				<File Id="756801656" Language="SFX">
 					<ShortName>CHAR_KeyJingle4.wav</ShortName>
@@ -116,6 +152,24 @@
 				<Event Id="2108854380" Name="OBJ_RocksFall" ObjectPath="\Events\Default Work Unit\LOCAL\ROCKS\OBJ_RocksFall" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3345242612" Name="OBJ_RocksPlaced" ObjectPath="\Events\Default Work Unit\LOCAL\ROCKS\OBJ_RocksPlaced" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="236611281" Language="SFX">
+					<ShortName>Dog akita puppy single bark_BLASTWAVEFX_00090.wav</ShortName>
+					<Path>SFX\Dog akita puppy single bark_BLASTWAVEFX_00090_10C4C929.wem</Path>
+				</File>
+				<File Id="465045227" Language="SFX">
+					<ShortName>Fox bark.wav</ShortName>
+					<Path>SFX\Fox bark_3EA10F69.wem</Path>
+				</File>
+				<File Id="850930565" Language="SFX">
+					<ShortName>Dog akita puppy whine breathy short_BLASTWAVEFX_10305.wav</ShortName>
+					<Path>SFX\Dog akita puppy whine breathy short_BLASTWAVEFX_10305_10C4C929.wem</Path>
+				</File>
+				<File Id="891604117" Language="SFX">
+					<ShortName>Dog in the mountains barking and growling.wav</ShortName>
+					<Path>SFX\Dog in the mountains barking and growling_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

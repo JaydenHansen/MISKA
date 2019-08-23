@@ -30,6 +30,12 @@
 						<Switch Name="Bottle" ID="{8F076B00-F6C0-4604-8EEE-D270B29CA4B2}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Circket_Loc" ID="{E68865FA-1912-456B-8516-506BD0546E0D}">
+					<ChildrenList>
+						<Switch Name="CricketField" ID="{01DF75DB-8852-4E07-8E5E-DDBCC79BA073}"/>
+						<Switch Name="CricketLake" ID="{79B76BDA-7433-4681-A1E0-DF30CEF4EC55}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

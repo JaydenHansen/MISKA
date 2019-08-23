@@ -17,10 +17,19 @@ public class Book : MonoBehaviour
     int m_currentPage;
     bool m_open;
 
+    Dictionary<AreaName, bool> m_checklist;
+    public ProgressLog m_progress;
+
     // Start is called before the first frame update
     void Start()
     {
-        m_pageTurn.clip.legacy = true;
+        //m_pageTurn.clip.legacy = true;
+
+        m_checklist = new Dictionary<AreaName, bool>();
+
+        m_checklist.Add(AreaName.STATION, false);
+        m_checklist.Add(AreaName.ROCKS, false);
+        m_checklist.Add(AreaName.DUCKS, false);
     }
 
     // Update is called once per frame
@@ -142,6 +151,22 @@ public class Book : MonoBehaviour
         }
     }
 
+    //Updates Checklist
+    void updateChecklist()
+    {
+        bool[] prog = m_progress.getProgressChecks();
+        for (int i = 0; i < 3; i++)                             //Iterate through lists
+        {
+            bool prog_bl = prog[i];
+            bool list_bl = m_checklist[(AreaName)i];
+            if (prog_bl != list_bl)                             //if there is a discrepancy between the progress, and that recorded on the checklist
+            {
+                m_checklist[(AreaName)i] = prog_bl;             //set checklist item to match the progress log
+                //start animation
+            }
+        }
+    }
+    
     private IEnumerator WaitForAnimation(Animation animation)
     {
         do
@@ -149,4 +174,5 @@ public class Book : MonoBehaviour
             yield return null;
         } while (animation.isPlaying);
     }
+   
 }
