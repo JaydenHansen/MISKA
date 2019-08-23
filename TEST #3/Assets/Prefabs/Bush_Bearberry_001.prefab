@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 2342681206308988275}
   - component: {fileID: 2342681206311855443}
   - component: {fileID: 2342681206310758291}
-  - component: {fileID: 1296685676954236392}
+  - component: {fileID: 3527958228081786970}
   m_Layer: 0
   m_Name: Bush_Bearberry_001
   m_TagString: Untagged
@@ -642,7 +642,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2342681206308501843}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 104.355965, y: 9.998169, z: 90.494865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -702,8 +702,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1296685676954236392
-CapsuleCollider:
+--- !u!65 &3527958228081786970
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -712,7 +712,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.42
-  m_Height: 1.9273853
-  m_Direction: 1
-  m_Center: {x: 0.13, y: 0.9671005, z: -0.1}
+  serializedVersion: 2
+  m_Size: {x: 2.55, y: 1.9273853, z: 1.73}
+  m_Center: {x: 0.21, y: 0.9671005, z: -0.0016497374}
