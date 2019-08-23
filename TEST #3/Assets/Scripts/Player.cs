@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     private MovementState m_movementState = MovementState.Walking;
     private bool m_hasPickup;
     private Pickup m_pickupObject;
+    private Pickup m_lastLookedAt;
 
     [SerializeField]
     private int m_trashCount;
@@ -110,6 +111,28 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, m_cameraController.Yaw, 0); // rotate the player in the direction of the camera
         }
 
+        if (!m_hasPickup)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(m_cameraController.DirectionRay, out hit, 10, 1 - LayerMask.NameToLayer("Rock")))
+            {
+                if (m_lastLookedAt)
+                {
+                    m_lastLookedAt.Renderer.material.SetFloat("_Enabled", 0);
+                }
+                Pickup pickup = hit.collider.GetComponent<Pickup>();
+                if (pickup)
+                {
+                    pickup.Renderer.material.SetFloat("_Enabled", 1);
+                    m_lastLookedAt = pickup;
+                }
+            }
+            else if (m_lastLookedAt)
+            {
+                m_lastLookedAt.Renderer.material.SetFloat("_Enabled", 0);
+                m_lastLookedAt = null;
+            }
+        }
         // Pickup
         if (Input.GetMouseButtonDown(0))
         {
