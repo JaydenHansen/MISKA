@@ -31,6 +31,12 @@ public class Book : MonoBehaviour
     {
         //m_pageTurn.clip.legacy = true;
 
+        m_checklist = new Dictionary<AreaName, bool>();
+
+        m_checklist.Add(AreaName.STATION, false);
+        m_checklist.Add(AreaName.ROCKS, false);
+        m_checklist.Add(AreaName.DUCKS, false);
+
         m_pages = new List<GameObject>();
         for(int i = 0; i < m_leftPages.childCount; i++)
         {
@@ -264,31 +270,6 @@ public class Book : MonoBehaviour
             yield return null;
         } while (animation.isPlaying);
     }
-   
+  
 }
-
-        m_checklist = new Dictionary<AreaName, bool>();
-
-        m_checklist.Add(AreaName.STATION, false);
-        m_checklist.Add(AreaName.ROCKS, false);
-        m_checklist.Add(AreaName.DUCKS, false);
-        //m_pageTurn.clip.legacy = true;
-
-        m_pages = new List<GameObject>();
-        for(int i = 0; i < m_leftPages.childCount; i++)
-        {
-            m_pages.Add(m_leftPages.GetChild(i).gameObject);
-            if (i < m_rightPages.childCount)
-                m_pages.Add(m_rightPages.GetChild(i).gameObject);
-        }
-
-        //m_pageTurn.clip.legacy = true;
-        m_baseCameraPos = m_bookCamera.transform.localPosition;
-
-        m_pages = new List<GameObject>();
-        for(int i = 0; i < m_leftPages.childCount; i++)
-        {
-            m_pages.Add(m_leftPages.GetChild(i).gameObject);
-            if (i < m_rightPages.childCount)
-                m_pages.Add(m_rightPages.GetChild(i).gameObject);
-        }
+ 
