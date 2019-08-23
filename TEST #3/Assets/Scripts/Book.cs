@@ -7,13 +7,15 @@ public class Book : MonoBehaviour
     public Player m_player;
     public CameraController m_playerCamera;
     public Camera m_bookCamera;
-    public GameObject[] m_pages;
+    public GameObject m_pageMesh;
     public Transform m_pageTurnLeft;
     public Transform m_pageTurnRight;
     public Transform m_leftPages;
     public Transform m_rightPages;
 
     public Animation m_pageTurn;
+
+    List<GameObject> m_pages;
     int m_currentPage;
     bool m_open;
 
@@ -23,13 +25,7 @@ public class Book : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //m_pageTurn.clip.legacy = true;
-
-        m_checklist = new Dictionary<AreaName, bool>();
-
-        m_checklist.Add(AreaName.STATION, false);
-        m_checklist.Add(AreaName.ROCKS, false);
-        m_checklist.Add(AreaName.DUCKS, false);
+        m_pageTurn.clip.legacy = true;
     }
 
     // Update is called once per frame
@@ -37,10 +33,12 @@ public class Book : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (m_open)
+            if (m_open && !m_pageTurn.isPlaying)
             {
                 m_player.enabled = true;
                 transform.GetChild(0).gameObject.SetActive(false);
+                foreach (GameObject page in m_pages)
+                    page.SetActive(false);
                 m_open = false;
                 Cursor.lockState = CursorLockMode.Locked;
 
@@ -48,7 +46,7 @@ public class Book : MonoBehaviour
                 m_playerCamera.m_camera.enabled = true;
                 m_playerCamera.enabled = true;
             }
-            else
+            else if (!m_open)
             {
                 m_player.enabled = false;
                 transform.GetChild(0).gameObject.SetActive(true);
@@ -64,12 +62,12 @@ public class Book : MonoBehaviour
         }
         if (m_open)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) && !m_pageTurn.isPlaying)
             {
-                if (m_currentPage + 1 <= Mathf.CeilToInt(m_pages.Length / 2f) - 1)
+                if (m_currentPage + 1 <= Mathf.CeilToInt(m_pages.Count / 2f) - 1)
                     StartCoroutine(SetPage(m_currentPage + 1, true));
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && !m_pageTurn.isPlaying)
             {
                 if (m_currentPage - 1 >= 0)
                     StartCoroutine(SetPage(m_currentPage - 1, false));
@@ -80,6 +78,8 @@ public class Book : MonoBehaviour
     void OpenBook()
     {
         m_currentPage = 0;
+        m_leftPages.gameObject.SetActive(true);
+        m_rightPages.gameObject.SetActive(true);
         m_pages[m_currentPage * 2].SetActive(true);
         m_pages[m_currentPage * 2 + 1].SetActive(true);
     }
@@ -89,6 +89,8 @@ public class Book : MonoBehaviour
         int oldPage = m_currentPage;
         m_currentPage = index;
 
+        m_pageMesh.SetActive(true);
+
         if (direction)
         {
             m_pages[oldPage * 2 + 1].transform.parent = m_pageTurnLeft;
@@ -97,14 +99,14 @@ public class Book : MonoBehaviour
 
             m_pages[m_currentPage * 2].SetActive(true);
 
-            if ((m_currentPage * 2 + 1) < m_pages.Length)
+            if ((m_currentPage * 2 + 1) < m_pages.Count)
                 m_pages[m_currentPage * 2 + 1].SetActive(true);
 
             m_pages[m_currentPage * 2].transform.parent = m_pageTurnRight;
             m_pages[m_currentPage * 2].transform.localPosition = Vector3.zero;
             m_pages[m_currentPage * 2].transform.localRotation = Quaternion.identity;
 
-            m_pageTurn.Play(direction ? "BookFlip" : "BookFlipReverse");
+            m_pageTurn.Play("Book_Flip_001");
 
             yield return WaitForAnimation(m_pageTurn);
 
@@ -132,7 +134,7 @@ public class Book : MonoBehaviour
             m_pages[m_currentPage * 2 + 1].transform.localPosition = Vector3.zero;
             m_pages[m_currentPage * 2 + 1].transform.localRotation = Quaternion.identity;
 
-            m_pageTurn.Play(direction ? "BookFlip" : "BookFlipReverse");
+            m_pageTurn.Play("Book_Flip_Reverse_001");
 
             yield return WaitForAnimation(m_pageTurn);
           
@@ -140,7 +142,7 @@ public class Book : MonoBehaviour
             m_pages[oldPage * 2].transform.localPosition = Vector3.zero;
             m_pages[oldPage * 2].transform.localRotation = Quaternion.identity;
 
-            if ((oldPage * 2 + 1) < m_pages.Length)            
+            if ((oldPage * 2 + 1) < m_pages.Count)            
                 m_pages[oldPage * 2 + 1].SetActive(false);         
             
             m_pages[oldPage * 2].SetActive(false);
@@ -149,6 +151,8 @@ public class Book : MonoBehaviour
             m_pages[m_currentPage * 2 + 1].transform.localPosition = Vector3.zero;
             m_pages[m_currentPage * 2 + 1].transform.localRotation = Quaternion.identity;
         }
+
+        m_pageMesh.SetActive(false);
     }
 
     //Updates Checklist
@@ -176,3 +180,18 @@ public class Book : MonoBehaviour
     }
    
 }
+
+        m_checklist = new Dictionary<AreaName, bool>();
+
+        m_checklist.Add(AreaName.STATION, false);
+        m_checklist.Add(AreaName.ROCKS, false);
+        m_checklist.Add(AreaName.DUCKS, false);
+        //m_pageTurn.clip.legacy = true;
+
+        m_pages = new List<GameObject>();
+        for(int i = 0; i < m_leftPages.childCount; i++)
+        {
+            m_pages.Add(m_leftPages.GetChild(i).gameObject);
+            if (i < m_rightPages.childCount)
+                m_pages.Add(m_rightPages.GetChild(i).gameObject);
+        }

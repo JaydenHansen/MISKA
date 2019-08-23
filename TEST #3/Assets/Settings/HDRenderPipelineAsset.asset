@@ -139,7 +139,7 @@ MonoBehaviour:
     supportSubsurfaceScattering: 1
     increaseSssSampleCount: 0
     supportVolumetrics: 1
-    increaseResolutionOfVolumetrics: 0
+    increaseResolutionOfVolumetrics: 1
     supportLightLayers: 0
     supportedLitShaderMode: 3
     supportDecals: 1
@@ -175,7 +175,7 @@ MonoBehaviour:
       maxShadowRequests: 128
       shadowMapsDepthBits: 32
       useDynamicViewportRescale: 1
-      punctualShadowQuality: 0
+      punctualShadowQuality: 2
       directionalShadowQuality: 0
     decalSettings:
       drawDistance: 1000
