@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1002497288}
-  m_IndirectSpecularColor: {r: 0.32131898, g: 0.46607414, b: 0.77370566, a: 1}
+  m_IndirectSpecularColor: {r: 0.31983307, g: 0.46374682, b: 0.77166027, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14254,7 +14254,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -14283,13 +14283,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002497287}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.41618344, y: -0.5754236, z: -0.081509896, w: 0.6993106}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 29.227001, y: -90.567, z: -42.802002}
 --- !u!114 &1002497290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14373,7 +14373,7 @@ MonoBehaviour:
   applyRangeAttenuation: 1
   useOldInspector: 0
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
   displayLightIntensity: 3.1415927
   displayAreaLightEmissiveMesh: 0
   lightLayers: 1
@@ -21233,6 +21233,10 @@ PrefabInstance:
       propertyPath: m_playerCamera
       value: 
       objectReference: {fileID: 333828338}
+    - target: {fileID: 1927583351, guid: 8cf09d07d3f9aa942bba14c15cdefec1, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cf09d07d3f9aa942bba14c15cdefec1, type: 3}
 --- !u!1 &1403445839 stripped
