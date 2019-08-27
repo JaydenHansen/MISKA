@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Games Making\2019\Miska-Game\MISKA-Audio Wwise\</ProjectRoot>
-		<SourceFilesRoot>D:\Games Making\2019\Miska-Game\MISKA-Audio Wwise\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Games Making\2019\Miska-Game\MISKA-Audio Wwise\GeneratedSoundBanks\</SoundBanksRoot>
+		<ProjectRoot>D:\Games Making\2019\MISKA\MISKA-Audio Wwise\</ProjectRoot>
+		<SourceFilesRoot>D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Games Making\2019\MISKA 25-Aug\MISKA\TEST #3\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Games Making\2019\Miska-Game\MISKA-Audio Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Games Making\2019\MISKA\MISKA-Audio Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,6 +16,9 @@
 			<ShortName>BNK_Global</ShortName>
 			<Path>BNK_Global.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3587600583" Name="AMB_Bed" ObjectPath="\Events\Default Work Unit\GLOBAL\AMBIENCE\AMB_Bed"/>
+				<Event Id="803434214" Name="EMIT_Cicada" ObjectPath="\Events\Default Work Unit\GLOBAL\AMBIENCE\EMITTERS\EMIT_Cicada"/>
+				<Event Id="1862066479" Name="EMIT_River" ObjectPath="\Events\Default Work Unit\GLOBAL\AMBIENCE\EMITTERS\EMIT_River"/>
 				<Event Id="1371164252" Name="OBJ_GarbagePickup" ObjectPath="\Events\Default Work Unit\GLOBAL\OBJECT\OBJ_GarbagePickup"/>
 				<Event Id="1744469232" Name="OBJ_JournalClose" ObjectPath="\Events\Default Work Unit\GLOBAL\OBJECT\OBJ_JournalClose"/>
 				<Event Id="848197124" Name="OBJ_JournalOpen" ObjectPath="\Events\Default Work Unit\GLOBAL\OBJECT\OBJ_JournalOpen"/>
@@ -37,6 +40,10 @@
 					<ShortName>CHAR_StepDirt2.wav</ShortName>
 					<Path>SFX\CHAR_StepDirt2_10C4C929.wem</Path>
 				</File>
+				<File Id="124505748" Language="SFX">
+					<ShortName>bed amb field.wav</ShortName>
+					<Path>SFX\bed amb field_10C4C929.wem</Path>
+				</File>
 				<File Id="159767409" Language="SFX">
 					<ShortName>run_dirt3.wav</ShortName>
 					<Path>SFX\run_dirt3_10C4C929.wem</Path>
@@ -44,6 +51,10 @@
 				<File Id="225701338" Language="SFX">
 					<ShortName>run_dirt4.wav</ShortName>
 					<Path>SFX\run_dirt4_10C4C929.wem</Path>
+				</File>
+				<File Id="392108370" Language="SFX">
+					<ShortName>CicadaNightClose.wav</ShortName>
+					<Path>SFX\CicadaNightClose_10C4C929.wem</Path>
 				</File>
 				<File Id="411336376" Language="SFX">
 					<ShortName>CHAR_KeyJingle9.wav</ShortName>
@@ -57,6 +68,10 @@
 					<ShortName>grassrun1.wav</ShortName>
 					<Path>SFX\grassrun1_10C4C929.wem</Path>
 				</File>
+				<File Id="556082101" Language="SFX">
+					<ShortName>STREAM_-_close_-_okutama_AND01.wav</ShortName>
+					<Path>SFX\STREAM_-_close_-_okutama_AND01_10C4C929.wem</Path>
+				</File>
 				<File Id="556919227" Language="SFX">
 					<ShortName>CHAR_StepDirt1.wav</ShortName>
 					<Path>SFX\CHAR_StepDirt1_10C4C929.wem</Path>
@@ -64,6 +79,10 @@
 				<File Id="640444701" Language="SFX">
 					<ShortName>grassrun3.wav</ShortName>
 					<Path>SFX\grassrun3_10C4C929.wem</Path>
+				</File>
+				<File Id="698330176" Language="SFX">
+					<ShortName>bed amb lake.wav</ShortName>
+					<Path>SFX\bed amb lake_10C4C929.wem</Path>
 				</File>
 				<File Id="756801656" Language="SFX">
 					<ShortName>CHAR_KeyJingle4.wav</ShortName>
