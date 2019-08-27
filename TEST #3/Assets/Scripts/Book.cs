@@ -45,6 +45,12 @@ public class Book : MonoBehaviour
                 m_pages.Add(m_rightPages.GetChild(i).gameObject);
         }
 
+        Canvas[] pageCanvas = GetComponentsInChildren<Canvas>(true);
+        foreach(Canvas canvas in pageCanvas)
+        {
+            canvas.worldCamera = m_bookCamera;
+        }
+
     }
 
     // Update is called once per frame

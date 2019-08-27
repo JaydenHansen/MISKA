@@ -853,6 +853,8 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: ac3188e95136a894cb2b9001cbdeaddf, type: 2}
   - {fileID: 7400000, guid: 42fb0b40d87043044b74be2e0956801a, type: 2}
+  - {fileID: 7400000, guid: 96ff7435ca80c8045ad4e886e9beabff, type: 2}
+  - {fileID: 7400000, guid: cd8e73bde1becf44ea1021e5a2115be8, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -878,8 +880,9 @@ MonoBehaviour:
   m_leftPages: {fileID: 654008926897756446}
   m_rightPages: {fileID: 654008926960618921}
   m_nextPageButton: {fileID: 1316409998662193634}
-  m_prevPageButton: {fileID: 0}
+  m_prevPageButton: {fileID: 5016256179508142946}
   m_pageTurn: {fileID: 654008926399815808}
+  m_progress: {fileID: 0}
 --- !u!65 &6117744486542996362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1266,7 +1269,7 @@ GameObject:
   - component: {fileID: 654008926831699258}
   - component: {fileID: 654008926831699261}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: BookCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1705,7 +1708,7 @@ GameObject:
   - component: {fileID: 9132803935823988977}
   - component: {fileID: 3513369495224272442}
   m_Layer: 0
-  m_Name: Button
+  m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1808,7 +1811,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 654008926399815810}
         m_MethodName: NextPage
         m_Mode: 1
         m_Arguments:
@@ -1962,7 +1965,7 @@ GameObject:
   - component: {fileID: 425550683383149386}
   - component: {fileID: 2469190963844874909}
   m_Layer: 0
-  m_Name: Button
+  m_Name: PrevButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2065,7 +2068,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 654008926399815810}
         m_MethodName: PrevPage
         m_Mode: 1
         m_Arguments:
