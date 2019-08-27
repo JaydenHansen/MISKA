@@ -1,13 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
 	540993415	Start_Music			\Default Work Unit\GLOBAL\Start_Music	
 	781213427	UI_POIComplete			\Default Work Unit\GLOBAL\UI\UI_POIComplete	
-	803434214	EMIT_Cicada			\Default Work Unit\GLOBAL\AMBIENCE\EMITTERS\EMIT_Cicada	
 	848197124	OBJ_JournalOpen			\Default Work Unit\GLOBAL\OBJECT\OBJ_JournalOpen	
-	1054363565	EMIT_Birds			\Default Work Unit\GLOBAL\AMBIENCE\EMITTERS\EMIT_Birds	
 	1371164252	OBJ_GarbagePickup			\Default Work Unit\GLOBAL\OBJECT\OBJ_GarbagePickup	
 	1744469232	OBJ_JournalClose			\Default Work Unit\GLOBAL\OBJECT\OBJ_JournalClose	
-	1862066479	EMIT_River			\Default Work Unit\GLOBAL\AMBIENCE\EMITTERS\EMIT_River	
-	3587600583	AMB_Bed			\Default Work Unit\GLOBAL\AMBIENCE\AMB_Bed	
 	3712748025	OBJ_JournalWrite			\Default Work Unit\GLOBAL\OBJECT\OBJ_JournalWrite	
 	4254456693	PLYR_Footstep			\Default Work Unit\GLOBAL\PLAYER\PLYR_Footstep	
 
@@ -15,51 +11,45 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 	1155297313	TrashType			\Default Work Unit\TrashType	
 	2450193098	Locomotion_Speed			\Default Work Unit\Locomotion_Speed	
 	2739821022	Locomotion_Material			\Default Work Unit\Locomotion_Material	
+	2805833147	Circket_Loc			\Default Work Unit\Circket_Loc	
 
 Switch	ID	Name	Switch Group			Notes
 	3848582449	Bottle	TrashType			
 	1296465089	Sprint	Locomotion_Speed			
 	2108779966	Walk	Locomotion_Speed			
-	2058049674	Wood	Locomotion_Material			
+	2655407367	Crouch	Locomotion_Speed			
 	2195636714	Dirt	Locomotion_Material			
 	4248645337	Grass	Locomotion_Material			
+	2840189495	CricketLake	Circket_Loc			
+	4190162518	CricketField	Circket_Loc			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	19780658	canteen_walk2	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\canteen_walk2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Canteen\canteen_walk2		81216
-	41777339	grasswalk3	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grasswalk3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Walking\WLK_Grass\grasswalk3		194504
-	52231446	wood walk	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\wood walk_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Wood\wood walk		95296
-	67823545	canteen_walk3	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\canteen_walk3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Canteen\canteen_walk3		110656
-	95813090	CHAR_KeyJingle1	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_KeyJingle1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Jingle\CHAR_KeyJingle1		103532
-	101642060	CHAR_StepDirt2	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_StepDirt2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Walking\WLK_Dirt\CHAR_StepDirt2		155508
-	113663474	Glass bottle	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Glass bottle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\OBJECTS\GARBAGE\Bottle\Glass bottle		97344
-	124505748	bed amb field	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\bed amb field_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\bed amb field		16228864
-	159767409	run_dirt3	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\run_dirt3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Dirt\run_dirt3		74608
-	177531119	Glass bottle 2	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Glass bottle 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\OBJECTS\GARBAGE\Bottle\Glass bottle 2		94272
-	225701338	run_dirt4	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\run_dirt4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Dirt\run_dirt4		84620
-	384827666	wood walk4	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\wood walk4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Wood\wood walk4		107584
-	392108370	CicadaNightClose	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CicadaNightClose_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\Emitters\CicadaNightClose		2954200
-	411336376	CHAR_KeyJingle9	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_KeyJingle9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Jingle\CHAR_KeyJingle9		130524
-	412018200	CHAR_KeyJingle7	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_KeyJingle7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Jingle\CHAR_KeyJingle7		155268
-	415327098	grassrun1	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grassrun1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Grass\grassrun1		40006
-	442915656	canteen_run2	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\canteen_run2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Canteen\canteen_run2		70720
-	527322072	canteen_run	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\canteen_run_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Canteen\canteen_run		64576
-	556082101	STREAM_-_close_-_okutama_AND01	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\STREAM_-_close_-_okutama_AND01_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\Emitters\STREAM_-_close_-_okutama_AND01		57657664
-	556919227	CHAR_StepDirt1	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_StepDirt1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Walking\WLK_Dirt\CHAR_StepDirt1		103028
-	570905760	wood walk3	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\wood walk3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Wood\wood walk3		103488
-	626742884	canteen_run3	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\canteen_run3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Canteen\canteen_run3		90432
-	640444701	grassrun3	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grassrun3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Grass\grassrun3		105112
-	665288730	wood walk2	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\wood walk2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Wood\wood walk2		97344
-	698330176	bed amb lake	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\bed amb lake_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\bed amb lake		16228864
-	748788963	BIRD-MOPOKE- HOOTS	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\BIRD-MOPOKE- HOOTS_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\Emitters\BIRD-MOPOKE- HOOTS		2094956
-	756801656	CHAR_KeyJingle4	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_KeyJingle4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Jingle\CHAR_KeyJingle4		126776
-	778543657	CHAR_StepDirt4	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_StepDirt4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Walking\WLK_Dirt\CHAR_StepDirt4		114732
-	825209776	run_dirt1	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\run_dirt1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Dirt\run_dirt1		62368
-	831904899	canteen_walk	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\canteen_walk_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Canteen\canteen_walk		65600
-	916592380	run_dirt2	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\run_dirt2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Dirt\run_dirt2		62924
-	916926370	Glass bottle 3	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Glass bottle 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\OBJECTS\GARBAGE\Bottle\Glass bottle 3		92224
-	963579058	grasswalk4	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grasswalk4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Walking\WLK_Grass\grasswalk4		284704
-	983771690	grassrun2	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grassrun2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Run\Terrain\RUN_Grass\grassrun2		105112
-	988950208	CHAR_StepDirt7	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_StepDirt7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Walking\WLK_Dirt\CHAR_StepDirt7		200104
-	1046026369	grasswalk	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grasswalk_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Walking\WLK_Grass\grasswalk		241152
-	1046108882	grasswalk2	D:\Games Making\2019\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grasswalk2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Footfall\Walk\Walking\WLK_Grass\grasswalk2		335916
+	41777339	grasswalk3	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grasswalk3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Walk\Terrain Material\WLK_Grass\grasswalk3		194504
+	58940914	Glass bottle 2	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Glass bottle 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\OBJECTS\GARBAGE\TrashType\Bottle\Glass bottle 2		94272
+	62116153	EFX EXT Leafs Blowing in the Wind Close 01	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\EFX EXT Leafs Blowing in the Wind Close 01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\BedAmbience\Ambience\EFX EXT Leafs Blowing in the Wind Close 01		31445056
+	95813090	CHAR_KeyJingle1	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_KeyJingle1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Crouching\Jingle\CHAR_KeyJingle1		103532
+	101642060	CHAR_StepDirt2	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_StepDirt2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Walk\Terrain Material\WLK_Dirt\CHAR_StepDirt2		155508
+	118404946	Glass bottle 3	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Glass bottle 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\OBJECTS\GARBAGE\TrashType\Bottle\Glass bottle 3		92224
+	159767409	run_dirt3	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\run_dirt3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Running\Terrain\RUN_Dirt\run_dirt3		74608
+	225701338	run_dirt4	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\run_dirt4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Running\Terrain\RUN_Dirt\run_dirt4		84620
+	318438522	Glass bottle	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Glass bottle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\OBJECTS\GARBAGE\TrashType\Bottle\Glass bottle		97344
+	327690895	Crickets near a lake	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Crickets near a lake_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\BedAmbience\Ambience\Crickets_Loc\Crickets near a lake		15577152
+	373910503	BGSummerbugsDEEXT02-MS	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\BGSummerbugsDEEXT02-MS_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\BedAmbience\Ambience\BGSummerbugsDEEXT02-MS		20324416
+	411336376	CHAR_KeyJingle9	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_KeyJingle9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Crouching\Jingle\CHAR_KeyJingle9		130524
+	412018200	CHAR_KeyJingle7	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_KeyJingle7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Crouching\Jingle\CHAR_KeyJingle7		155268
+	415327098	grassrun1	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grassrun1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Running\Terrain\RUN_Grass\grassrun1		40006
+	471469595	CicadaNightClose	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CicadaNightClose_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\EmittersAmbience\CicadaNightClose		2954200
+	471705550	KAIB_WATR_CU_Brook Light Water Flow_000789	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\KAIB_WATR_CU_Brook Light Water Flow_000789_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\EmittersAmbience\KAIB_WATR_CU_Brook Light Water Flow_000789		3827776
+	556919227	CHAR_StepDirt1	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_StepDirt1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Walk\Terrain Material\WLK_Dirt\CHAR_StepDirt1		103028
+	640444701	grassrun3	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grassrun3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Running\Terrain\RUN_Grass\grassrun3		105112
+	659240309	Crickets in a field	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Crickets in a field_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\AMBIENCE\BedAmbience\Ambience\Crickets_Loc\Crickets in a field		10786880
+	756801656	CHAR_KeyJingle4	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_KeyJingle4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Crouching\Jingle\CHAR_KeyJingle4		126776
+	778543657	CHAR_StepDirt4	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_StepDirt4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Walk\Terrain Material\WLK_Dirt\CHAR_StepDirt4		114732
+	825209776	run_dirt1	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\run_dirt1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Running\Terrain\RUN_Dirt\run_dirt1		62368
+	916592380	run_dirt2	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\run_dirt2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Running\Terrain\RUN_Dirt\run_dirt2		62924
+	963579058	grasswalk4	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grasswalk4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Walk\Terrain Material\WLK_Grass\grasswalk4		284704
+	983771690	grassrun2	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grassrun2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Running\Terrain\RUN_Grass\grassrun2		105112
+	988950208	CHAR_StepDirt7	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\CHAR_StepDirt7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Walk\Terrain Material\WLK_Dirt\CHAR_StepDirt7		200104
+	1046026369	grasswalk	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grasswalk_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Walk\Terrain Material\WLK_Grass\grasswalk		241152
+	1046108882	grasswalk2	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\grasswalk2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\GLOBAL\PLAYER CHARACTER\GAMEPLAY\Footstep\Walk\Terrain Material\WLK_Grass\grasswalk2		335916
 

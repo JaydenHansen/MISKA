@@ -2,3 +2,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2108854380	OBJ_RocksFall			\Default Work Unit\LOCAL\ROCKS\OBJ_RocksFall	
 	3345242612	OBJ_RocksPlaced			\Default Work Unit\LOCAL\ROCKS\OBJ_RocksPlaced	
 
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	236611281	Dog akita puppy single bark_BLASTWAVEFX_00090	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Dog akita puppy single bark_BLASTWAVEFX_00090_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LOCAL\ROCKS\ANIMALS\Fox barks\Dog akita puppy single bark_BLASTWAVEFX_00090		56920
+	465045227	Fox bark	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Fox bark_A6DF42BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\LOCAL\ROCKS\ANIMALS\Fox barks\Fox bark		119500
+	850930565	Dog akita puppy whine breathy short_BLASTWAVEFX_10305	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Dog akita puppy whine breathy short_BLASTWAVEFX_10305_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LOCAL\ROCKS\ANIMALS\Fox barks\Dog akita puppy whine breathy short_BLASTWAVEFX_10305		343400
+	891604117	Dog in the mountains barking and growling	C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\SFX\Dog in the mountains barking and growling_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LOCAL\ROCKS\ANIMALS\Fox barks\Dog in the mountains barking and growling		491584
+

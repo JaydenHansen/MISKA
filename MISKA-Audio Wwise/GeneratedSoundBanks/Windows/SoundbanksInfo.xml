@@ -144,32 +144,5 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2733895951" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\BNK_Rocks</ObjectPath>
-			<ShortName>BNK_Rocks</ShortName>
-			<Path>BNK_Rocks.bnk</Path>
-			<IncludedEvents>
-				<Event Id="2108854380" Name="OBJ_RocksFall" ObjectPath="\Events\Default Work Unit\LOCAL\ROCKS\OBJ_RocksFall" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3345242612" Name="OBJ_RocksPlaced" ObjectPath="\Events\Default Work Unit\LOCAL\ROCKS\OBJ_RocksPlaced" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="236611281" Language="SFX">
-					<ShortName>Dog akita puppy single bark_BLASTWAVEFX_00090.wav</ShortName>
-					<Path>SFX\Dog akita puppy single bark_BLASTWAVEFX_00090_10C4C929.wem</Path>
-				</File>
-				<File Id="465045227" Language="SFX">
-					<ShortName>Fox bark.wav</ShortName>
-					<Path>SFX\Fox bark_3EA10F69.wem</Path>
-				</File>
-				<File Id="850930565" Language="SFX">
-					<ShortName>Dog akita puppy whine breathy short_BLASTWAVEFX_10305.wav</ShortName>
-					<Path>SFX\Dog akita puppy whine breathy short_BLASTWAVEFX_10305_10C4C929.wem</Path>
-				</File>
-				<File Id="891604117" Language="SFX">
-					<ShortName>Dog in the mountains barking and growling.wav</ShortName>
-					<Path>SFX\Dog in the mountains barking and growling_10C4C929.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
-		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

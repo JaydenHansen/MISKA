@@ -17,8 +17,6 @@ namespace AK
         static const AkUniqueID OBJ_JOURNALCLOSE = 1744469232U;
         static const AkUniqueID OBJ_JOURNALOPEN = 848197124U;
         static const AkUniqueID OBJ_JOURNALWRITE = 3712748025U;
-        static const AkUniqueID OBJ_ROCKSFALL = 2108854380U;
-        static const AkUniqueID OBJ_ROCKSPLACED = 3345242612U;
         static const AkUniqueID PLYR_FOOTSTEP = 4254456693U;
         static const AkUniqueID START_MUSIC = 540993415U;
         static const AkUniqueID UI_POICOMPLETE = 781213427U;
@@ -96,7 +94,6 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID BNK_GLOBAL = 568373026U;
-        static const AkUniqueID BNK_ROCKS = 2733895951U;
     } // namespace BANKS
 
     namespace BUSSES

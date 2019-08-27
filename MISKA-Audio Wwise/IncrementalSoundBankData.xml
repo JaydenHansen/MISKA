@@ -3,14 +3,14 @@
 	<Platform GUID="{29AD6252-0245-435D-A5DA-DECBEE11E859}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="BNK_Global" Hash="668233226" Timestamp="1566542444"/>
-				<File Name="BNK_Rocks" Hash="4091354924" Timestamp="1566542444"/>
-				<File Name="Init" Hash="3807624419" Timestamp="1566542444"/>
+				<File Name="BNK_Global" Hash="668233226" Timestamp="1566948764"/>
+				<File Name="BNK_Rocks" Hash="4177967634" Timestamp="1566948417"/>
+				<File Name="Init" Hash="3807624419" Timestamp="1566948764"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3447408544" Timestamp="1566542444"/>
+				<File Name="" Hash="3257510904" Timestamp="1566948764"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
