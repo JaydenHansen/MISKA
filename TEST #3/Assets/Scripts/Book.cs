@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Book : MonoBehaviour
 {
@@ -12,9 +13,10 @@ public class Book : MonoBehaviour
     public Transform m_pageTurnRight;
     public Transform m_leftPages;
     public Transform m_rightPages;
-    public GameObject m_nextPageButton;
     public GameObject m_prevPageButton;
-
+    public GameObject m_nextPageButton;
+    public GameObject m_staticLeftPage;
+    public GameObject m_staticRightPage;
     public Animation m_pageTurn;
 
     List<GameObject> m_pages;
@@ -58,33 +60,13 @@ public class Book : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (m_open && !m_pageTurn.isPlaying)
+            if (m_open)
             {
-                m_player.enabled = true;
-                transform.GetChild(0).gameObject.SetActive(false);
-                foreach (GameObject page in m_pages)
-                    page.SetActive(false);
-                m_nextPageButton.SetActive(false);
-                m_prevPageButton.SetActive(false);
-                m_open = false;
-                Cursor.lockState = CursorLockMode.Locked;
-
-                m_bookCamera.enabled = false;
-                m_playerCamera.m_camera.enabled = true;
-                m_playerCamera.enabled = true;
+                CloseBook();
             }
             else if (!m_open)
             {
-                m_player.enabled = false;
-                transform.GetChild(0).gameObject.SetActive(true);
                 OpenBook();
-                m_open = true;
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-
-                m_bookCamera.enabled = true;
-                m_playerCamera.m_camera.enabled = false;
-                m_playerCamera.enabled = false;
             }
         }
         if (m_open)
@@ -92,39 +74,13 @@ public class Book : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow) && !m_pageTurn.isPlaying)
             {
                 if (m_currentPage + 1 <= Mathf.CeilToInt(m_pages.Count / 2f) - 1)
-                    StartCoroutine(SetPage(m_currentPage + 1, true));
+                    StartCoroutine(SetPageCoroutine(m_currentPage + 1, true));
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow) && !m_pageTurn.isPlaying)
             {
                 if (m_currentPage - 1 >= 0)
-                    StartCoroutine(SetPage(m_currentPage - 1, false));
-            }
-            if (Input.GetKey(KeyCode.Mouse1))
-            {                
-                int width = Screen.width;
-                int height = Screen.height;
-                int x = (int)Input.mousePosition.x;
-                int y = (int)Input.mousePosition.y;
-
-                float imageAspectRatio = width / (float)height; // assuming width > height 
-                float Px = (2 * (x / (float)width) - 1) * Mathf.Tan(m_bookCamera.fieldOfView / 2f * Mathf.PI / 180f) * imageAspectRatio;
-                float Py = (2 * (y / (float)height) - 1) * Mathf.Tan(m_bookCamera.fieldOfView / 2f * Mathf.PI / 180f);
-
-                Vector3 direction = new Vector3(Px, Py, 1);
-                direction = m_bookCamera.transform.rotation * direction;
-
-                Ray ray = new Ray(m_baseCameraPos * 0.1f + transform.position, direction);// * 0.1 cause of scale
-
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit, 1, 1 - LayerMask.NameToLayer("Book"), QueryTriggerInteraction.Collide)) 
-                {
-                    m_bookCamera.transform.position = hit.point + (hit.normal * 0.1f);
-                }
-                else
-                {
-                    m_bookCamera.transform.localPosition = m_baseCameraPos;
-                }
-            }
+                    StartCoroutine(SetPageCoroutine(m_currentPage - 1, false));
+            }            
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
                 m_bookCamera.transform.localPosition = m_baseCameraPos;
@@ -132,15 +88,48 @@ public class Book : MonoBehaviour
         }
     }
 
-    void OpenBook()
+    public void OpenBook()
     {
-        m_currentPage = 0;
-        m_leftPages.gameObject.SetActive(true);
-        m_rightPages.gameObject.SetActive(true);
-        m_nextPageButton.SetActive(true);
-        m_prevPageButton.SetActive(true);
-        m_pages[m_currentPage * 2].SetActive(true);
-        m_pages[m_currentPage * 2 + 1].SetActive(true);
+        if (!m_pageTurn.isPlaying)
+        {
+            m_currentPage = 0;
+            m_leftPages.gameObject.SetActive(true);
+            m_rightPages.gameObject.SetActive(true);
+            m_nextPageButton.SetActive(true);
+            m_prevPageButton.SetActive(true);
+            m_pages[m_currentPage * 2].SetActive(true);
+            m_pages[m_currentPage * 2 + 1].SetActive(true);
+
+            m_player.enabled = false;
+            transform.GetChild(0).gameObject.SetActive(true);
+            m_staticLeftPage.SetActive(true);
+            m_staticRightPage.SetActive(true);
+            m_open = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            m_bookCamera.enabled = true;
+            m_playerCamera.m_camera.enabled = false;
+            m_playerCamera.enabled = false;
+        }
+    }
+
+    public void CloseBook()
+    {
+        m_player.enabled = true;
+        transform.GetChild(0).gameObject.SetActive(false);
+        m_staticLeftPage.SetActive(false);
+        m_staticRightPage.SetActive(false);
+        foreach (GameObject page in m_pages)
+            page.SetActive(false);
+        m_nextPageButton.SetActive(false);
+        m_prevPageButton.SetActive(false);
+        m_open = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        m_bookCamera.enabled = false;
+        m_playerCamera.m_camera.enabled = true;
+        m_playerCamera.enabled = true;
     }
 
     public void LeftZoom()
@@ -167,16 +156,21 @@ public class Book : MonoBehaviour
     public void NextPage()
     {
         if (m_currentPage + 1 <= Mathf.CeilToInt(m_pages.Count / 2f) - 1)
-            StartCoroutine(SetPage(m_currentPage + 1, true));
+            StartCoroutine(SetPageCoroutine(m_currentPage + 1, true));
     }
 
     public void PrevPage()
     {
         if (m_currentPage - 1 >= 0)
-            StartCoroutine(SetPage(m_currentPage - 1, false));
+            StartCoroutine(SetPageCoroutine(m_currentPage - 1, false));
     }
 
-    IEnumerator SetPage(int index, bool direction)
+    public void SetPage(int index)
+    {
+        StartCoroutine(SetPageCoroutine(index, index > m_currentPage));
+    }
+
+    IEnumerator SetPageCoroutine(int index, bool direction)
     {
         int oldPage = m_currentPage;
         m_currentPage = index;
@@ -249,8 +243,15 @@ public class Book : MonoBehaviour
 
         m_pageMesh.SetActive(false);
 
-        m_nextPageButton.SetActive(true);
-        m_prevPageButton.SetActive(true);
+        if (m_currentPage + 1 <= Mathf.CeilToInt(m_pages.Count / 2f) - 1)
+            m_nextPageButton.SetActive(true);
+        else
+            m_nextPageButton.SetActive(false);
+
+        if (m_currentPage - 1 >= 0)
+            m_prevPageButton.SetActive(true);
+        else
+            m_prevPageButton.SetActive(false);
     }
 
     //Updates Checklist
@@ -275,6 +276,16 @@ public class Book : MonoBehaviour
         {
             yield return null;
         } while (animation.isPlaying);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
   
 }

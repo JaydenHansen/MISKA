@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
     [Header("")]
     public CameraController m_cameraController = null;
     public Transform m_pickup;
-    
+    public float m_rockGlowDist;
+
     private CharacterController m_characterController;
     private Animator m_animator;
     private Vector3 m_velocity;
@@ -114,7 +115,7 @@ public class Player : MonoBehaviour
         if (!m_hasPickup)
         {
             RaycastHit hit;
-            if (Physics.Raycast(m_cameraController.DirectionRay, out hit, 10, 1 - LayerMask.NameToLayer("Rock")))
+            if (Physics.Raycast(m_cameraController.DirectionRay, out hit, m_rockGlowDist, 1 - LayerMask.NameToLayer("Rock")))
             {
                 if (m_lastLookedAt)
                 {
@@ -138,20 +139,12 @@ public class Player : MonoBehaviour
         {
             if (!m_hasPickup)
             {
-                RaycastHit hit;
-                if (Physics.Raycast(m_cameraController.DirectionRay, out hit, 10))
+                if (m_lastLookedAt && !m_lastLookedAt.Rigidbody.isKinematic)
                 {
-                    if (hit.collider.tag == "Pickup")
-                    {
-                        Pickup pickup = hit.collider.GetComponent<Pickup>();
-                        if (pickup && !pickup.Rigidbody.isKinematic)
-                        {
-                            pickup.StartPickup(m_pickup);
-                            Physics.IgnoreCollision(m_characterController, hit.collider, true);
-                            m_hasPickup = true;
-                            m_pickupObject = pickup;
-                        }
-                    }
+                    m_lastLookedAt.StartPickup(m_pickup);
+                    Physics.IgnoreCollision(m_characterController, m_lastLookedAt.Collider, true);
+                    m_hasPickup = true;
+                    m_pickupObject = m_lastLookedAt;
                 }
             }
             else
