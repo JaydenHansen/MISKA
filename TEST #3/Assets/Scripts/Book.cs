@@ -53,6 +53,8 @@ public class Book : MonoBehaviour
             canvas.worldCamera = m_bookCamera;
         }
 
+        CloseBook();
+        OpenBook();
     }
 
     // Update is called once per frame
