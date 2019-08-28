@@ -58,7 +58,7 @@ public class Book : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && !m_pageTurn.isPlaying)
         {
             if (m_open)
             {
@@ -96,7 +96,6 @@ public class Book : MonoBehaviour
             m_leftPages.gameObject.SetActive(true);
             m_rightPages.gameObject.SetActive(true);
             m_nextPageButton.SetActive(true);
-            m_prevPageButton.SetActive(true);
             m_pages[m_currentPage * 2].SetActive(true);
             m_pages[m_currentPage * 2 + 1].SetActive(true);
 
@@ -130,6 +129,13 @@ public class Book : MonoBehaviour
         m_bookCamera.enabled = false;
         m_playerCamera.m_camera.enabled = true;
         m_playerCamera.enabled = true;
+
+        if (m_zoomed)
+        {
+            AnimationClip zoomReverse = m_pageTurn.GetClip("Book_Zoom_Reverse_001");
+            zoomReverse.SampleAnimation(gameObject, zoomReverse.length);
+            m_zoomed = false;
+        }
     }
 
     public void LeftZoom()
@@ -147,8 +153,15 @@ public class Book : MonoBehaviour
             {
                 m_pageTurn.Play("Book_Zoom_Reverse_001");
                 m_zoomed = false;
-                m_nextPageButton.SetActive(true);
-                m_prevPageButton.SetActive(true);
+                if (m_currentPage + 1 <= Mathf.CeilToInt(m_pages.Count / 2f) - 1)
+                    m_nextPageButton.SetActive(true);
+                else
+                    m_nextPageButton.SetActive(false);
+
+                if (m_currentPage - 1 >= 0)
+                    m_prevPageButton.SetActive(true);
+                else
+                    m_prevPageButton.SetActive(false);
             }
         }
     }

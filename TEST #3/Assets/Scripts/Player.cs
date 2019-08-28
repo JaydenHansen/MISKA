@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     private MovementState m_movementState = MovementState.Walking;
     private bool m_hasPickup;
     private Pickup m_pickupObject;
-    private Pickup m_lastLookedAt;
+    private Renderer m_lastLookedAt;
 
     [SerializeField]
     private int m_trashCount;
@@ -119,18 +119,30 @@ public class Player : MonoBehaviour
             {
                 if (m_lastLookedAt)
                 {
-                    m_lastLookedAt.Renderer.material.SetFloat("_Enabled", 0);
+                    m_lastLookedAt.material.SetFloat("_Enabled", 0);
                 }
-                Pickup pickup = hit.collider.GetComponent<Pickup>();
-                if (pickup)
+                Renderer renderer = hit.collider.GetComponent<Renderer>();
+                if (renderer)
                 {
-                    pickup.Renderer.material.SetFloat("_Enabled", 1);
-                    m_lastLookedAt = pickup;
+                    if (renderer.tag == "Pickup")
+                    {
+                        Pickup pickup = renderer.GetComponent<Pickup>();
+                        if (pickup && !pickup.Rigidbody.isKinematic)
+                        {
+                            renderer.material.SetFloat("_Enabled", 1);
+                            m_lastLookedAt = renderer;
+                        }
+                    }
+                    else
+                    {
+                        renderer.material.SetFloat("_Enabled", 1);
+                        m_lastLookedAt = renderer;
+                    }
                 }
             }
             else if (m_lastLookedAt)
             {
-                m_lastLookedAt.Renderer.material.SetFloat("_Enabled", 0);
+                m_lastLookedAt.material.SetFloat("_Enabled", 0);
                 m_lastLookedAt = null;
             }
         }
@@ -139,12 +151,14 @@ public class Player : MonoBehaviour
         {
             if (!m_hasPickup)
             {
-                if (m_lastLookedAt && !m_lastLookedAt.Rigidbody.isKinematic)
+                Pickup rock = m_lastLookedAt.GetComponent<Pickup>();
+                if (rock && !rock.Rigidbody.isKinematic)
                 {
-                    m_lastLookedAt.StartPickup(m_pickup);
-                    Physics.IgnoreCollision(m_characterController, m_lastLookedAt.Collider, true);
+                    rock.Renderer.material.SetFloat("_Enabled", 0);
+                    rock.StartPickup(m_pickup);
+                    Physics.IgnoreCollision(m_characterController, rock.Collider, true);
                     m_hasPickup = true;
-                    m_pickupObject = m_lastLookedAt;
+                    m_pickupObject = rock;
                 }
             }
             else

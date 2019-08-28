@@ -18,6 +18,8 @@ public class Fox : MonoBehaviour
         m_agent = GetComponent<NavMeshAgent>();
         m_animator = GetComponent<Animator>();
         m_currentWaypoint = 0;
+        m_agent.autoBraking = false;
+        m_agent.updateRotation = false;
         m_agent.SetDestination(m_waypoints[m_currentWaypoint].position);
     }
 
@@ -31,7 +33,38 @@ public class Fox : MonoBehaviour
             {
                 m_currentWaypoint++;
                 m_agent.SetDestination(m_waypoints[m_currentWaypoint].position);
+                if (m_currentWaypoint == m_waypoints.Length - 1)
+                {
+                    m_agent.autoBraking = true;
+                }
+            }
+        }
+
+        if (m_agent.velocity.sqrMagnitude != 0)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out hit, 10, 1 - LayerMask.NameToLayer("Ground")))
+            {
+                Quaternion targetRotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+                targetRotation *= Quaternion.LookRotation(new Vector3(m_agent.velocity.x, 0, m_agent.velocity.z));
+
+                transform.rotation = targetRotation;//Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 10);
             }
         }
     }
+
+    private void FixedUpdate()
+    {
+       
+    }
+
+    //private void OnDrawGizmosSelected()
+    //{
+    //    for(int i = 0; i < m_agent.path.corners.Length; i++)
+    //    {
+    //        Gizmos.DrawSphere(m_agent.path.corners[i], 0.5f);
+    //        if (i != 0)
+    //            Gizmos.DrawLine(m_agent.path.corners[i - 1], m_agent.path.corners[i]);
+    //    }
+    //}
 }
