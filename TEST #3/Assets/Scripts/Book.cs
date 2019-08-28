@@ -74,12 +74,12 @@ public class Book : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow) && !m_pageTurn.isPlaying)
             {
                 if (m_currentPage + 1 <= Mathf.CeilToInt(m_pages.Count / 2f) - 1)
-                    StartCoroutine(SetPageCoroutine(m_currentPage + 1, true));
+                    SetPage(m_currentPage + 1);
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow) && !m_pageTurn.isPlaying)
             {
                 if (m_currentPage - 1 >= 0)
-                    StartCoroutine(SetPageCoroutine(m_currentPage - 1, false));
+                    SetPage(m_currentPage - 1);
             }            
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
@@ -156,18 +156,19 @@ public class Book : MonoBehaviour
     public void NextPage()
     {
         if (m_currentPage + 1 <= Mathf.CeilToInt(m_pages.Count / 2f) - 1)
-            StartCoroutine(SetPageCoroutine(m_currentPage + 1, true));
+            SetPage(m_currentPage + 1);
     }
 
     public void PrevPage()
     {
         if (m_currentPage - 1 >= 0)
-            StartCoroutine(SetPageCoroutine(m_currentPage - 1, false));
+            SetPage(m_currentPage - 1);
     }
 
     public void SetPage(int index)
     {
-        StartCoroutine(SetPageCoroutine(index, index > m_currentPage));
+        if (index != m_currentPage)
+            StartCoroutine(SetPageCoroutine(index, index > m_currentPage));
     }
 
     IEnumerator SetPageCoroutine(int index, bool direction)
