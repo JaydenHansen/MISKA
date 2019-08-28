@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
         if (!m_hasPickup)
         {
             RaycastHit hit;
-            if (Physics.Raycast(m_cameraController.DirectionRay, out hit, m_rockGlowDist, 1 - LayerMask.NameToLayer("Rock")))
+            if (Physics.Raycast(m_cameraController.DirectionRay, out hit, m_rockGlowDist, 1 - LayerMask.NameToLayer("Rock"), QueryTriggerInteraction.Collide))
             {
                 if (m_lastLookedAt)
                 {
@@ -137,6 +137,15 @@ public class Player : MonoBehaviour
                     {
                         renderer.material.SetFloat("_Enabled", 1);
                         m_lastLookedAt = renderer;
+                    }
+                }
+                else
+                {
+                    Renderer childRenderer = hit.collider.GetComponentInChildren<Renderer>();
+                    if (childRenderer)
+                    {
+                        childRenderer.material.SetFloat("_Enabled", 1);
+                        m_lastLookedAt = childRenderer;                        
                     }
                 }
             }

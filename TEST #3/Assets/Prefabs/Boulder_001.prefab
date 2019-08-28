@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1743165664926980025}
   - component: {fileID: 1743165664926177177}
   - component: {fileID: 1743165664925078873}
-  - component: {fileID: 3880744861865268062}
+  - component: {fileID: 1179450284449579747}
   m_Layer: 0
   m_Name: Boulder_001
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &3880744861865268062
-CapsuleCollider:
+--- !u!64 &1179450284449579747
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,7 +88,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 3.86
-  m_Height: 8.25
-  m_Direction: 1
-  m_Center: {x: 0.22, y: 3.78, z: 0.035684105}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 3e914a57d040d4141a5ef60dd8ff1c95, type: 3}
