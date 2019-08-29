@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\s182378\Documents\MISKA\TEST #3\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ProjectRoot>D:\Games Making\2019\MISKA 25-Aug\MISKA\MISKA-Audio Wwise\</ProjectRoot>
+		<SourceFilesRoot>D:\Games Making\2019\MISKA 25-Aug\MISKA\MISKA-Audio Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Games Making\2019\MISKA 25-Aug\MISKA\MISKA-Audio Wwise\GeneratedSoundBanks\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\s182378\Documents\MISKA\MISKA-Audio Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Games Making\2019\MISKA 25-Aug\MISKA\MISKA-Audio Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,11 @@
 			<ShortName>BNK_Global</ShortName>
 			<Path>BNK_Global.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1371164252" Name="OBJ_GarbagePickup" ObjectPath="\Events\Default Work Unit\GLOBAL\OBJECT\OBJ_GarbagePickup"/>
+				<Event Id="3587600583" Name="AMB_Bed" ObjectPath="\Events\Default Work Unit\GLOBAL\AMBIENCE\AMB_Bed"/>
+				<Event Id="1054363565" Name="EMIT_Birds" ObjectPath="\Events\Default Work Unit\GLOBAL\AMBIENCE\EMITTERS\EMIT_Birds"/>
+				<Event Id="1225233505" Name="EMIT_Cicadas" ObjectPath="\Events\Default Work Unit\GLOBAL\AMBIENCE\EMITTERS\EMIT_Cicadas"/>
+				<Event Id="1862066479" Name="EMIT_River" ObjectPath="\Events\Default Work Unit\GLOBAL\AMBIENCE\EMITTERS\EMIT_River"/>
+				<Event Id="920825535" Name="OBJ_BottlePickup" ObjectPath="\Events\Default Work Unit\GLOBAL\OBJECT\OBJ_BottlePickup"/>
 				<Event Id="1744469232" Name="OBJ_JournalClose" ObjectPath="\Events\Default Work Unit\GLOBAL\OBJECT\OBJ_JournalClose"/>
 				<Event Id="848197124" Name="OBJ_JournalOpen" ObjectPath="\Events\Default Work Unit\GLOBAL\OBJECT\OBJ_JournalOpen"/>
 				<Event Id="3712748025" Name="OBJ_JournalWrite" ObjectPath="\Events\Default Work Unit\GLOBAL\OBJECT\OBJ_JournalWrite"/>
@@ -33,9 +37,9 @@
 					<ShortName>Glass bottle 2.wav</ShortName>
 					<Path>SFX\Glass bottle 2_10C4C929.wem</Path>
 				</File>
-				<File Id="62116153" Language="SFX">
-					<ShortName>EFX EXT Leafs Blowing in the Wind Close 01.wav</ShortName>
-					<Path>SFX\EFX EXT Leafs Blowing in the Wind Close 01_10C4C929.wem</Path>
+				<File Id="72370513" Language="SFX">
+					<ShortName>canteen_run.wav</ShortName>
+					<Path>SFX\canteen_run_10C4C929.wem</Path>
 				</File>
 				<File Id="95813090" Language="SFX">
 					<ShortName>CHAR_KeyJingle1.wav</ShortName>
@@ -49,25 +53,37 @@
 					<ShortName>Glass bottle 3.wav</ShortName>
 					<Path>SFX\Glass bottle 3_10C4C929.wem</Path>
 				</File>
+				<File Id="138724543" Language="SFX">
+					<ShortName>wood walk2.wav</ShortName>
+					<Path>SFX\wood walk2_10C4C929.wem</Path>
+				</File>
 				<File Id="159767409" Language="SFX">
 					<ShortName>run_dirt3.wav</ShortName>
 					<Path>SFX\run_dirt3_10C4C929.wem</Path>
+				</File>
+				<File Id="220955263" Language="SFX">
+					<ShortName>wood walk3.wav</ShortName>
+					<Path>SFX\wood walk3_10C4C929.wem</Path>
 				</File>
 				<File Id="225701338" Language="SFX">
 					<ShortName>run_dirt4.wav</ShortName>
 					<Path>SFX\run_dirt4_10C4C929.wem</Path>
 				</File>
+				<File Id="252657119" Language="SFX">
+					<ShortName>canteen_walk.wav</ShortName>
+					<Path>SFX\canteen_walk_10C4C929.wem</Path>
+				</File>
+				<File Id="273585866" Language="SFX">
+					<ShortName>wood walk4.wav</ShortName>
+					<Path>SFX\wood walk4_10C4C929.wem</Path>
+				</File>
 				<File Id="318438522" Language="SFX">
 					<ShortName>Glass bottle.wav</ShortName>
 					<Path>SFX\Glass bottle_10C4C929.wem</Path>
 				</File>
-				<File Id="327690895" Language="SFX">
-					<ShortName>Crickets near a lake.wav</ShortName>
-					<Path>SFX\Crickets near a lake_10C4C929.wem</Path>
-				</File>
-				<File Id="373910503" Language="SFX">
-					<ShortName>BGSummerbugsDEEXT02-MS.wav</ShortName>
-					<Path>SFX\BGSummerbugsDEEXT02-MS_10C4C929.wem</Path>
+				<File Id="327973492" Language="SFX">
+					<ShortName>canteen_run3.wav</ShortName>
+					<Path>SFX\canteen_run3_10C4C929.wem</Path>
 				</File>
 				<File Id="411336376" Language="SFX">
 					<ShortName>CHAR_KeyJingle9.wav</ShortName>
@@ -80,6 +96,10 @@
 				<File Id="415327098" Language="SFX">
 					<ShortName>grassrun1.wav</ShortName>
 					<Path>SFX\grassrun1_10C4C929.wem</Path>
+				</File>
+				<File Id="419015726" Language="SFX">
+					<ShortName>bed amb field.wav</ShortName>
+					<Path>SFX\bed amb field_10C4C929.wem</Path>
 				</File>
 				<File Id="471469595" Language="SFX">
 					<ShortName>CicadaNightClose.wav</ShortName>
@@ -97,10 +117,6 @@
 					<ShortName>grassrun3.wav</ShortName>
 					<Path>SFX\grassrun3_10C4C929.wem</Path>
 				</File>
-				<File Id="659240309" Language="SFX">
-					<ShortName>Crickets in a field.wav</ShortName>
-					<Path>SFX\Crickets in a field_10C4C929.wem</Path>
-				</File>
 				<File Id="756801656" Language="SFX">
 					<ShortName>CHAR_KeyJingle4.wav</ShortName>
 					<Path>SFX\CHAR_KeyJingle4_10C4C929.wem</Path>
@@ -109,13 +125,29 @@
 					<ShortName>CHAR_StepDirt4.wav</ShortName>
 					<Path>SFX\CHAR_StepDirt4_10C4C929.wem</Path>
 				</File>
+				<File Id="823768882" Language="SFX">
+					<ShortName>wood walk.wav</ShortName>
+					<Path>SFX\wood walk_10C4C929.wem</Path>
+				</File>
 				<File Id="825209776" Language="SFX">
 					<ShortName>run_dirt1.wav</ShortName>
 					<Path>SFX\run_dirt1_10C4C929.wem</Path>
 				</File>
+				<File Id="833917855" Language="SFX">
+					<ShortName>canteen_run2.wav</ShortName>
+					<Path>SFX\canteen_run2_10C4C929.wem</Path>
+				</File>
+				<File Id="889890054" Language="SFX">
+					<ShortName>canteen_walk3.wav</ShortName>
+					<Path>SFX\canteen_walk3_10C4C929.wem</Path>
+				</File>
 				<File Id="916592380" Language="SFX">
 					<ShortName>run_dirt2.wav</ShortName>
 					<Path>SFX\run_dirt2_10C4C929.wem</Path>
+				</File>
+				<File Id="959970206" Language="SFX">
+					<ShortName>canteen_walk2.wav</ShortName>
+					<Path>SFX\canteen_walk2_10C4C929.wem</Path>
 				</File>
 				<File Id="963579058" Language="SFX">
 					<ShortName>grasswalk4.wav</ShortName>
