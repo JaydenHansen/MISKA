@@ -9,6 +9,7 @@ public class RockStacker : MonoBehaviour
     public int m_maxTouchingGround = 1;
     public float m_stackDelay;
     public float m_knockOverStrength;
+    public Vector3 m_knockOverDirection;
     public VoidEvent m_onStacked;
 
     bool m_hasBeenStacked;
@@ -96,12 +97,11 @@ public class RockStacker : MonoBehaviour
     //}
 
     public void KnockOver()
-    {
-        Vector3 direction = new Vector3(Random.Range(-1, 1), 0, Random.Range(-1, 1)).normalized;
+    {        
         foreach(Pickup rockPickup in m_rocks)
         {
             rockPickup.Rigidbody.isKinematic = false;
-            rockPickup.Rigidbody.AddForce(direction * m_knockOverStrength);
+            rockPickup.Rigidbody.AddForce(m_knockOverDirection * m_knockOverStrength);
         }
         this.enabled = true;
        // m_rockfallSound.Post(gameObject);

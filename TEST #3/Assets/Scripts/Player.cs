@@ -31,8 +31,8 @@ public class Player : MonoBehaviour
     private Pickup m_pickupObject;
     private Renderer m_lastLookedAt;
 
-    [SerializeField]
-    private int m_trashCount;
+    //[SerializeField]
+    //private int m_trashCount;
 
     public StepSoundTrigger m_stepper;
   //  public AK.Wwise.Event m_trashSound;
@@ -51,11 +51,11 @@ public class Player : MonoBehaviour
         get { return m_movementState; }
         set { m_movementState = value; }
     }
-    public int TrashCount
-    {
-        get { return m_trashCount; }
-        set { m_trashCount = value; }
-    }
+    //public int TrashCount
+    //{
+    //    get { return m_trashCount; }
+    //    set { m_trashCount = value; }
+    //}
     #endregion
 
     // Use this for initialization
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
                 m_stepper.SetMovementState(m_movementState, movementVector.magnitude);
             }                      
 
-            CollisionFlags collision = m_characterController.Move((m_velocity * Time.deltaTime) + (m_gravity * Time.deltaTime));
+            //CollisionFlags collision = m_characterController.Move((m_velocity * Time.deltaTime) + (m_gravity * Time.deltaTime));
 
             m_velocity -= new Vector3(m_velocity.x, 0, m_velocity.z) * m_friction * Time.deltaTime; // Drag only on the x/z
 
@@ -183,6 +183,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        CollisionFlags collision = m_characterController.Move((m_velocity * Time.fixedDeltaTime) + (m_gravity * Time.fixedDeltaTime));
+    }
+
     //private void OnControllerColliderHit(ControllerColliderHit hit)
     //{
     //    // THIS MAKES THE PLAYER SLIDE DOWN SLOPES... AND ALSO UP...
@@ -190,9 +195,9 @@ public class Player : MonoBehaviour
     //    //m_velocity -= velocityProjected;
     //}
 
-    public void OnTrashPickup()
-    {
-        m_trashCount++;
-        //m_trashSound.Post(gameObject);
-    }
+    //public void OnTrashPickup()
+    //{
+    //    m_trashCount++;
+    //    //m_trashSound.Post(gameObject);
+    //}
 }
