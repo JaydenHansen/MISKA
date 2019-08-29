@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 2729283868041621390}
   - component: {fileID: 2729283868041621385}
   - component: {fileID: 1902206272}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Trash Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.79, y: 0.6, z: 0.69}
+  m_Size: {x: 0.39, y: 0.6, z: 0.69}
   m_Center: {x: 0, y: 0.29, z: 0}
 --- !u!114 &2729283868041621391
 MonoBehaviour:
@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: aa40ad18f8798df42b1fbf72bd6c8a38, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aa40ad18f8798df42b1fbf72bd6c8a38, type: 3}
       propertyPath: m_LocalPosition.x

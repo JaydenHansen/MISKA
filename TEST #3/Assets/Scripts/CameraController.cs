@@ -87,7 +87,9 @@ public class CameraController : MonoBehaviour
         m_lookAtStrength = m_baseLookAtStrength;
         m_yaw = transform.rotation.eulerAngles.y;
         m_pitch = transform.rotation.eulerAngles.x;
-	}
+
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 	
 	// Update is called once per frame
 	void Update ()

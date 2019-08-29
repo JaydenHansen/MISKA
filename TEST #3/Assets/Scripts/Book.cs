@@ -53,8 +53,8 @@ public class Book : MonoBehaviour
             canvas.worldCamera = m_bookCamera;
         }
 
-        CloseBook();
-        OpenBook();
+        //CloseBook();
+        //OpenBook();
     }
 
     // Update is called once per frame
@@ -101,7 +101,8 @@ public class Book : MonoBehaviour
             m_pages[m_currentPage * 2].SetActive(true);
             m_pages[m_currentPage * 2 + 1].SetActive(true);
 
-            m_player.enabled = false;
+            if (m_player)
+                m_player.enabled = false;
             transform.GetChild(0).gameObject.SetActive(true);
             m_staticLeftPage.SetActive(true);
             m_staticRightPage.SetActive(true);
@@ -117,7 +118,8 @@ public class Book : MonoBehaviour
 
     public void CloseBook()
     {
-        m_player.enabled = true;
+        if (m_player)
+            m_player.enabled = true;
         transform.GetChild(0).gameObject.SetActive(false);
         m_staticLeftPage.SetActive(false);
         m_staticRightPage.SetActive(false);
